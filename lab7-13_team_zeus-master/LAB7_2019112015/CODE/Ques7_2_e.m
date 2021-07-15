@@ -1,0 +1,10 @@
+p = 0.5;
+figure('NumberTitle', 'off', 'Name', 'Pole-Zero plot for P=0.5');
+zplane(1/p,p);
+b = [1,-1/p];
+a = [1,-p];
+n = 1001;
+figure('NumberTitle', 'off', 'Name', 'Frequency Response for P=0.5');
+freqz(b,a,n);
+figure('NumberTitle', 'off', 'Name', 'Impulse Response for P=0.5');
+impz(b,a);
