@@ -1,0 +1,21 @@
+LAB THEORY -10
+
+Question - 10.1
+
+b) None of these filters phases are linear as they are IIR filers
+
+
+c)It depends on the purpose of usage of filters. One can infer based on these factors:
+1) RESPONSE - The magnitude response of the butterworth filter decreases with increase in frequency , while the magnitude response of the Chebyshev filter fluctuates or show ripples.
+
+2) TRANSITION BAND - Chebyshev filters have sharper frequency cut-off while butterworth filters have a wide transition band.
+
+3) TIME DOMAIN - Butterworth filters have a better time domain as output is more stable (no peaking) while chebyshev filters have ringing in time domain due to ripples/peaks.
+
+
+Question - 10.2
+
+b)Yes this filter is  stable as its poles lies inside the unit circle.
+
+
+c)As the r0 value decreases the magnitude response becomes broader and the peak value decreases.

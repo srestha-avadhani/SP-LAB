@@ -1,0 +1,36 @@
+fs = 8192; 
+Ts = 1/fs;
+fo = 1024;
+n = 0:73112;
+w01 = pi/4;
+b01 = 1/((1-exp(1i*w01))*(1-exp(-1i*w01)));
+a1 = 1;
+b1 = [b01,-b01*(exp(1i*w01)+exp(-1i*w01)),b01];
+
+r0 = 0.99;
+b02 = 1;
+b2 = [ b02,-b02*(exp(1i*w01)+exp(-1i*w01)),b02];
+a2 = [1,-r0*(exp(1i*w01)+exp(-1i*w01)),+r0^2];
+s = sin(2*pi*fo*n*Ts);
+x = y + s';
+
+y1 = filter(b1,a1,x);
+y2 = filter(b2,a2,x);
+figure;subplot(2,2,2);
+plot(y1(1:100));grid on;
+xlabel('samples');
+ylabel('filtered x');
+title('notch filter in (a)');
+subplot(2,2,1);
+plot(x(1:100));grid on;
+xlabel('samples');
+ylabel('original x');
+subplot(2,2,4);
+plot(y2(1:100));grid on;
+xlabel('samples');
+ylabel('filtered x');
+title('notch filter in (b)');
+subplot(2,2,3);
+plot(x(1:100));grid on;
+xlabel('samples');
+ylabel('original x');
