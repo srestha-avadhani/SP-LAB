@@ -1,0 +1,51 @@
+For ideal viewing experience use the editor size greater than or equals to 154X55*
+
+In the repository there are two folders namely Result and Code.
+The result folder contains all the screenshots of the plots obtained from al the
+questions labeled properly.
+
+The codes folders contain the scripts for each question and the functions used.
+The Pictures in the Result folders are in .jpeg format and can be opened easily by
+most of the picture viewing software.
+All the codes run on Matlab without any issue.
+
+Question 1
+
+In the first question we basically had to write a script and function for summation of
+sinusoids of different frequencies. here the function takes inputs the vectors A,F,P, and the values td,fs giving an output xt.
+
+All the parts only had various different types of summation. So the basic input and output types are same.
+
+Question 2 
+ 
+The second question was similar to first question but here addition was to be done to the harmonics.
+
+and try this for different values of A,N,f0 
+
+Question 3
+
+In the third question we created an envelope using the ASDR this is type of a filter but not exactly a filter here a function
+ and a script had to written were function calculates the envelope and we multiply this value to the original signal to get our 
+restricted output.
+
+Here set 1 is for values 0.2,0.2,0.7,0.4,0.2
+and set 2 is for  values 0.3,0.1,0.5,0.4,0.2
+
+Here we have three outputs first being the original signal the second is the envelope and the third is the restricted one.
+
+Question 4
+
+In the fourth question we had to make tunes by urselves using the notes generated in the above questions, by changing F_notes
+we had to use random F_notes and random td_notes also and obsere the outputs, and finally we had to pick a tune ourselves and tryto regenerate it.
+
+
+THEORY
+
+5.1-d They are phone ringing sounds.
+e-  The periods of the three signal is different from each other period(A)<period(B)<period(C) It is not of this order 
+if it is a continuous signal but as it is a discrete time signal the period can only be an integer the order changes.
+5.2-f There is no significant change in the sound heard.As frequency increases the loudness(amplitude) of the signal decreases.
+
+
+
+
