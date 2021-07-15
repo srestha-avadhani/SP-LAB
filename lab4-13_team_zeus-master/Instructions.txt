@@ -1,0 +1,67 @@
+*For ideal viewing experience use the editor size greater than or equals to 154X55*
+
+In the repository there are two folders namely Result and Code.
+The result folder contains all the screenshots of the plots obtained from al the
+questions labeled properly.
+
+The codes folders contain the scripts for each question and the functions used.
+The Pictures in the Result folders are in .jpeg format and can be opened easily by
+most of the picture viewing software.
+All the codes run on Matlab without any issue.
+
+Question 1 
+
+Here we had been given a voice signal and had to find its sampling frequency and
+the samples at all that points. But we see that no of our samples were only 7045
+were the sampling frequency was 8000 therfore multiplying 7045 with inverse of
+frequency we get the time duration of the signal. and to find the no of bits to be
+used in ADC i have taken ceiling of the logarithm of bit rate.  ANd the no of
+quantisation levels is 2 power of the no of bits used in ADC And then played the
+sound with different sampling frequencies. observations are present in Theory part.
+
+Question 2
+
+In the second question we need to take samples of the given sine function and now
+we have a writtena quant function which quantizes the signal and gives the output
+to another array. and we can find the error in this by subtracting the quantised
+signal from the original. Now we calculate the maximum error by varying the no of
+levels and note our observations. And also we calculate the signal to noise ratio.
+and check what happens to it when B is increased. All of theese data are plotted in
+subplots.
+
+Question 3
+In the third question we need to retake our original voice signal and perform
+quantization with varying levels of quantization and play them. Observations are
+mentioned in theory part.
+
+THEORY QUESTIONS:
+
+4.1.
+
+The number of bits used in the ADC is eqaul to ceil(log2(n)) , where n is the bit
+rate and in this case it is equal to 16. So we get the number of bits required to
+be 4.
+Now the number of levels of quantization  is 2^b, b is number of bits and here b =
+4 , so the number of levels of quantization is 16.
+
+When we use lower sampling frequencies we notice that the voice is dragging and
+less clear while when we increase the sampling frequency we notice that the voice
+is quick and not clear.
+
+The property used is frequency scaling.
+
+4.2
+
+ As the B increses from 1 to 8 the quantized signal comes nearer to the original
+ sampled signal.
+ As the B increses from 1 to 8 the maximum absolute quantization error decreses .
+ As the B increses from 1 to 8 the SQNR increses .
+
+4.3
+
+  At L=8,the audio is not as clear as that of the original signal.
+  As the L increses from 1 to 256 the quality of the audio increses and we get
+  clear audio at higher L values.
+  As L increases the frequency of the quantized signal doesnt change.
+
+
