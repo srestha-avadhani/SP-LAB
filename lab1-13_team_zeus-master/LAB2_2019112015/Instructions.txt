@@ -1,0 +1,85 @@
+*For ideal viewing experience use the editor size greater than or equals to 154X55*
+
+In the repository there are two folders namely Result and Code. 
+The result folder contains all the screenshots of the plots obtained from al the questions labeled properly.
+
+The codes folders contain the scripts for each question and the functions used.
+The Pictures in the Result folders are in .jpeg format and can be opened easily by
+most of the picture viewing software.
+All the codes run on Matlab without any issue.
+
+1st Question
+
+1(a)
+It is the part where we write the function for further usage, therefore there are no plots and code explicitly, continuosFT.m is the answer for ques 1(a).
+
+1(b)
+In 1(b) we have a square wave over which continousFT is used to compute the Fourier Transform of the function, This is done for a time period 2.
+Here w varies from -5.0 to 5.0 with a step of 0.05. here the limits for Fourier transform is froim -T to T. 
+The output has 4 plots where the first plot is the real part of the output, the second is the imaginary part, 
+third the absolute value of the output(i.e |output|) and the last plot is the phase of the output.
+
+1(c)
+The only change in 1(c) is the Time Period T =4.Everything else is as it is in 1(b) and 1(c).
+
+1(d)
+Here the functions are the only change instead of the earlier sqaure wave we use e^jt,cost and sint. But the outputs are in the same order.  
+
+1(e)
+Here the function is a triagular wave where instead of the earlier square wave, but everything else is same.
+
+2nd question
+
+There are only two codes namely 2(b) and 2(g), everything from 2(b) to 2(f) is plotted in 2(b).
+The outputs are in the order, original next is the low pass filtered output, next is the high pass filtered output, and the last is the output
+from the non ideal filter.
+Here 1 and 2 are for wc = 0.5 and wc = 2.0
+
+2(b) 
+Basically 2(a) is calculating Fourier coefficients of a function and reconstructing the signal from its Fourier coefficients. 
+Therefore periodicity also doesnt change.
+
+2(c)
+In this question we just know the kw0 for each Fourier coefficient Ak.
+ 
+2(d)
+ In this question we write a function for a low pass filter which avoids the part of signal which has frequency less than the threshold.
+Here the function takes input the original Fourier coefficients, the frequencies respective of each Ak, and the threshold limit wc 
+it outputs the Fourier coefficients the limited signal bk. we use these coefficients to reconstruct our limited signal.
+
+2(e)
+In this question we write a function for a high pass filter which avoids the part of signal which has frequency higher than the threshold.
+Here the function takes input the original fourier coefficients, the frequencies respective of each Ak, and the threshold limit wc
+it outputs the fourier coefficients the limited signal bk. we use these coefficients to reconstruct our limited signal.
+
+2(f)
+In this question we write a function for a non ideal filter which avoids the part of signal which has frequency higher than the threshold.
+Here the function takes input the original fourier coefficients, the frequencies respective of each Ak, and the threshold limit wc
+it outputs the fourier coefficients the limited signal bk. we use these coefficients to reconstruct our limited signal.
+
+2(g)
+
+this is everything we did from 2(b) to 2(f) but for the new function sin(2t) + cos(3t).
+
+*****************************************************************************************************
+
+THEORY
+
+QUESTION - 2.1
+
+(C) AS T IS INCREASED FROM 2 TO 4 THE NUMBER OF OSCILATIONS INCREASES IN BETWEEN AS THE TIME IS SCALED BY FACTOR OF TWO THE FREQUENCY IS ALSO INCREASED BY 2.THE SCALING IN TIME PROPERTY OF FT IS USED HERE.
+
+(D) THE EXPECTED FT FOR THE X(t) WOULD BE IMPULSE FUNCTIONS AT W0.BUT WE OBSERVE GRAPHS OF SHIFTED AND ADDED GRAPHS OF SINC FUNCTIONS.
+
+(E) THE EXPECTED FT IS THE SQUARE OF SINC FUNCTION.
+
+QUESTION - 2.2
+
+(A) IN A LTI SYSTEM WITH FREQUENCY RESPONSE H(W), A SIGNAL X(t) IS GIVEN AS INPUT WITH FS ak,THEN THE OUTPUT SIGNAL FS (bk) WOULD BE ak*H(KW0).THE PERIODICITY OF THE OUTPUT SIGNAL WOULD BE SAME AS THAT OF INPUT SIGNAL.
+
+(D) IN A LOW PASS FILTER IF W0 < WC THEN ONLY THOSE FREQUENCIES WILL BE TAKEN INTO ACCOUNT, ALL OTHER FREQUENCIES THE VALUE WILL BE ZERO. SO WHEN WC = 0.5 THEN ONLY W0 = 0 WILL BE TAKEN INTO ACCOUNT, ALL OHTER VALUES WILL BE ZEROS.
+
+(E) IN A HIGH PASS FILTER IF W0>WC THEN ONLY THISE FREQUENCIES WILL BE TAKEN INTO ACCOUNT ALL THE OTHER VALUES WILL BE ZERO. SO WHEN  WC = 0.5 EXCEPT W0 = 0.5 ALL OTHER VALUES WILL BE TAKEN INTO ACCOUNT.
+
+(F) THE COEFFICIENTS OF OUTPUT SIGNAL ARE ak*H(KW0). SO AS H(KW0) CAN BE COMPLEX AND ak CAN ALSO BE COMPLEX HENCE bk CAN ALSO BE COMPLEX.
+    THE VALUES OF a,g FOR IT TO BE EQUAL TO THAT OF RC CIRCUIT IS a = 1/RC; g = RC;

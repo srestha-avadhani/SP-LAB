@@ -1,0 +1,99 @@
+Under the lab1-13_team_zeus folder In the repository there are two folders
+namely Result and Code. The result folder contains all the screenshots of the plots
+obtained from al the questions labeled properly, The Fourier coefficients could not be placed in this folder as the outputs were pretty big. The codes folders contain the
+scripts for each question and the functions used. There is one more word document
+containing All the theoretical question and the problem solving part.
+
+The Pictures in the Result folders are in .jpeg format and can be opened easily by
+most of the picture viewing software.
+All the codes run on Matlab without any issue.
+
+1st Question
+
+1(a)
+
+In first Question there are 2 scripts and a function 1a and 1c
+here N is the subscript k in Ak where k varies from -N to N
+T is the time period of the function
+a, b are the upper and lower limits of integration as our function is zero below
+-1/4 and above 1/4 We have considered our limits to be -1/4 and 1/4.
+Here t is the variable on which differentiation is performed our expression is set
+to the triangular wave function By passing all the parameters to the fourierCoeff
+function. This function initialises w0 as 2*pi/T initialises a vector F of length
+2*N+1 with 0.Here FS_idx can be considered as the range of the function Now in the
+for loop nn is the iterator from 1 to 2*N+1 on integrating the expression*the
+exponential part of the Fourier series we get our Fourier series coefficients(Ak's).
+Next it prints the Fourier coefficients. After coming out of the function the next
+lines of the code plot the real and imaginary parts of the graph using the stem
+function.
+
+1(c)
+
+Everything except the function on which the fourier is transfrmed is same here
+instead of the triangular wave sin(w0t) is used.
+
+
+2nd Question
+
+2(a)
+The second question uses the function written for the first question and also a new
+function is defined for the second question.
+The Goal of 2(a) is reconstruction of the same triangular wave signal in one period
+using their Fourier coefficient as we know x(t) is the summation of all the Ak's
+multiplied by e^(jkw0t) from -1/2 to 1/2. We use the output of the first function
+written in this problem now this is given a input to the partialfouriersum which
+adds u all the Ak*^(jkw0t) terms to reproduce the signal from their Fourier
+coefficients.
+
+2(b)
+
+In 2b we build our original function so that we can compare this to the reproduced
+signal, this code simply constructs and plots both the original and reconstructed
+signal.
+
+2(c)
+Under the third part of the second question we find the normal error and the mean
+square error btw the original and reconstructed signals this script contains simple
+for loop containing subtractions, multiplications etc.. for calculating the errors.
+The normal error is the subtraction of the value of the reconstructed signal from
+the the original signal.
+The mean sqaure error is the average of the squares of the individual(normal) errors
+The two errors are calculated in two scripts namely Ques2c_1 and Ques2c_2
+
+2(d)
+
+Both the errors calculated in the above question are now plotted in the same graph
+and  the values of N are varied from 1 to 100. from the outputs of the graph we see
+that with increase in N the value of the error is reduced, more significantly the
+value of Mean Square error  is reduced significantly to the terms of 10^(-18).
+
+3rd Question
+
+3(b)
+The code written for the first question can now again be used to find the fourier
+series coefficients of the sqaure wave in this question and that is what we did, by
+changing the function, Time period and the intervals in the first question we can
+arrive at the solution for this question. As the value T=100 was too time consuming
+we couldnt do it instead we plotted it for the values of T = 1,5,10.
+
+In the results 3(b)-1 is for N = 100 and 3(b)-2 is for N = 1000
+
+3(c)
+
+Now again for reconstruction of the signal we can use the code written for the
+second question and change the function, Time period and others in them to obtain
+the reconstructed signal
+
+4th Question
+
+4(a)
+This is a classical even function so again using the function written for the first
+question we can easily get the fourier coefficients of the function y = |x| we can
+observe as it is a real and even function we get our coefficients t be real and
+even.
+
+4(b)
+This now is the classical example of real and odd function. Now using th
+fouriercoef function we can calculate the fourier sereis coefficients of the
+y=x function. As we noe from properties of fourier series the fourier coefficients
+will odd and purely imaginary.
