@@ -1,0 +1,59 @@
+*For ideal viewing experience use the editor size greater than or equals to 154X55*
+
+In the repository there are two folders namely Result and Code.
+The result folder contains all the screenshots of the plots obtained from al the questions labeled properly.
+
+The codes folders contain the scripts for each question and the functions used.
+The Pictures in the Result folders are in .jpeg format and can be opened easily by
+most of the picture viewing software.
+All the codes run on Matlab without any issue.
+
+Question 1
+
+In our first question we got our x(t) by taking a time interval 0:0.00-1:2 so that
+it looks like a continous signal. Now we take our sampling frequency to be 0.1 and
+create discrete time signal x[n] from our x(t). Now this samples are to be used in
+the further questions.
+
+Question 2
+
+Here we had to use interp1() inbuilt function
+there are 3 different types of interpolations
+1) for zero hold we use the mode as 'nearest' in interp1 here to obtain our results.
+2) For linear interpolation we put the mode 'linear' in interp1 here to obtain our
+results
+3) For the third part where we had to use the formula given in our handout and got
+our outputs.
+Now after this we compare this to our original signal and calculate maximum
+absolute error which is modulus of the difference between original signal and the
+reconstructed signal using the three methods.
+
+Question 3
+
+Here we have a non band limited signal but we only performed the samples only for
+the base of the triangular wave. Now we do this for multiple smapling frequencies
+testing what happens when sampling frequency is increased i.e Ts is decreased. Now
+for the different values of Ts we have plotted the graphs using sub plot. and
+finally we put the reconstructed and the samples side by side just to have a
+comparision.
+
+Question 4
+
+We reconstruct our signals similar to the above question and all th plots are also
+similar to the above question the only change being that here we have a sine
+function instead of the trianular wave.
+This question is different from our above questions as here we have our sampling
+rate less than nyquist rate for some cases in this, therefore aliasing occurs that
+is the signal is not reconstructed properly. In our question for ts = 0.1 the
+signal is perfectly recontructed as the nyquist rate is lower than the sampling
+rate, but for all others the sampling rate is either equal or less than nyquist
+rate therefore aliasing occurs.
+
+                                    Theory
+
+3.2) As we move from 0 to 2 along the x - axis then we observee the quality of the reconstruction is low at the neighbourhood of 0 and 2. The error increses towards the edges of 0 and 2.
+
+3.3) As Ts decreases we get closer to the exact reconstruction of the original function x(t).
+
+3.4) The nyquist rate of the given signal is 5.
+     For Ts>0.2 aliasing occurs  and so we cannot reconstruct the given function x(t).
